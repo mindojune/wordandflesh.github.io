@@ -1279,15 +1279,17 @@ function showReplies() {
 }
 
 function showRetweets() {
+  console.log("working show Retweets");
   var new_data = model.getRetweetsByDate();
   time_plot.update(new_data);
 
   time_plot.displaying = "retweets";
-  console.log("working show Retweets");
+  
   return;
 }
 
 function showLikes() {
+  console.log("working show Likes");
   var new_data = model.getLikesByDate();
   time_plot.update(new_data);
   
