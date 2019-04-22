@@ -1217,12 +1217,25 @@ class Plot {
   
 }
 
-
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////
 ///////////////////////////////////////////////
 // data loading and drawing <=> "main()" part of the function
 var time_plot;
-var model = new Model('https://raw.githubusercontent.com/mindojune/mindojune.github.io/master/_data/clean_maga_oct17_apr18.json', 
+
+var model1 = new Model('https://raw.githubusercontent.com/mindojune/mindojune.github.io/master/_data/clean_maga_oct17_apr18.json', 
                       'https://raw.githubusercontent.com/mindojune/mindojune.github.io/master/_data/clean_metoo_oct17_apr18.json');
+var model2 = new Model('https://raw.githubusercontent.com/mindojune/mindojune.github.io/master/_data/makeamericagreatagain_align.json', 
+                    'https://raw.githubusercontent.com/mindojune/mindojune.github.io/master/_data/metoo_align_101417_041418.json');
+ 
+
+
+var model = model1;
+
 model.loadData()
   .then(([data1, data2]) => {
     model.data1 = data1;
@@ -1341,8 +1354,8 @@ function preprocess(data){
 function align() {
   //time_plot.updateUpset(false);
   //console.log(model.data1);
-  model = new Model('https://raw.githubusercontent.com/mindojune/mindojune.github.io/master/_data/makeamericagreatagain_align.json', 
-                    'https://raw.githubusercontent.com/mindojune/mindojune.github.io/master/_data/metoo_align_101417_041418.json');
+  model = model2;
+  
   //model = new Model('data/maga_align_061515_121515.json', 'data/metoo_align_101417_041418.json');
   
   model.loadData()
