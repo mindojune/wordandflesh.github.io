@@ -1268,8 +1268,11 @@ d3.select('#show-total').on('click', showTotal);
 d3.select('#show-hb').on('click', updateUpsetMAGA);
 d3.select('#align').on('click', align);
 d3.select('#dealign').on('click', dealign);
+d3.select('#test').on('click', console.log("wahidyun");
 // d3.select('#show-hbMETOO').on('click', updateUpsetMETOO);
 
+    
+    
 function showReplies() {
   var new_data = model.getRepliesByDate();
   time_plot.update(new_data);
@@ -2303,6 +2306,7 @@ div.tooltip2 {
             <button id="show-likes" type="button" class="btn btn-light">Likes</button>
             <button id="show-total" type="button" class="btn btn-light">Total</button>
             <button id="show-ratio" type="button" class="btn btn-light">Ratio</button>
+            <button id="test" type="button" class="btn btn-light">Test</button>
           </div>
       </div> 
       <div text-align="justify">
